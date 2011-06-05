@@ -191,7 +191,7 @@ class LambdaManager(models.Manager):
 ## in models.py:
 
 #from django.db import models
-#from expressions import LambdaManager
+#from lambda_manager import LambdaManager
 #
 #class Poll(models.Model):
 #    question = models.CharField(max_length=200)
