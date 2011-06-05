@@ -6,7 +6,6 @@ from django.db import models
 class Expression(object):
 
     mapping = {}
-    class_name = 'Expression'
 
     def __init__(self, expr):
         self.expr = expr
@@ -98,7 +97,7 @@ class Expression(object):
 
 
 def is_expression(ob):
-    return getattr(ob,'class_name','') == 'Expression'
+    return isinstance(ob,Expression)
 
 
 def function(expression,arg):
