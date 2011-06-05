@@ -102,9 +102,7 @@ def is_expression(ob):
 
 def function(expression,arg):
     field = expression.args()[0]
-    kwargs = {}
-    kwargs[field] = arg
-    return kwargs
+    kwargs = {field: arg}
     return kwargs
 
 def boolean_operator(opname, expression, value):
