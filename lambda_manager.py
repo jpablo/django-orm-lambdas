@@ -1,0 +1,1 @@
+/home/jpablo/Dropbox/PycharmProjects/django_linq/testapp/lambda_manager.py
