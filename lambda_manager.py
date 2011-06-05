@@ -185,29 +185,3 @@ class LambdaManager(models.Manager):
         else:
             return self.model.objects.filter(**kwargs)
 
-
-## Examples:
-
-## in models.py:
-
-#from django.db import models
-#from lambda_manager import LambdaManager
-#
-#class Poll(models.Model):
-#    question = models.CharField(max_length=200)
-#    pub_date = models.DateTimeField('date published')
-
-#    objects = LambdaManager()
-#
-#class Choice(models.Model):
-#    poll = models.ForeignKey(Poll)
-#    choice = models.CharField(max_length=200)
-#    votes = models.IntegerField()
-#
-#    objects = LambdaManager()
-
-
-#Choice.objects.where(lambda c: c.votes >= 1)
-#Choice.objects.where(lambda c: c.votes != 1)
-#Choice.objects.where(lambda c: c.poll.question.exact('aaa'))
-#Choice.objects.where(lambda c: c.poll.question.contains('aa'))
