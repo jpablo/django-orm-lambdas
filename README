@@ -36,10 +36,10 @@ Choice.objects.where(lambda c: c.poll.question.exact('aaa'))
 Choice.objects.where(lambda c: c.poll.question.contains('aa'))
 Choice.objects.where(lambda c: c.votes == c.anumber)
 Choice.objects.where(lambda c: c.votes > c.anumber)
+Choice.objects.where(lambda x: x.votes < x.votes + 1)
+Choice.objects.where(lambda x: x.votes < x.votes + x.votes + 2)
 
-
-TODO: this kind of behaviour:
+TODO: Implement other arithmetic operators: *, -, /
 
 Entry.objects.filter(n_comments__gt=F('n_pingbacks') * 2)
-Entry.objects.filter(rating__lt=F('n_comments') + F('n_pingbacks'))
 
