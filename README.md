@@ -2,15 +2,15 @@
 
 LambdaManager extends the regular django.db.models.Manager with one function:
 
-<pre>
+
 where(lambda x: ...)
-</pre>
+
 
 that can be used like this:
 
 ## Example
 
-<pre>
+```python
 # in models.py:
 
 from django.db import models
@@ -29,10 +29,10 @@ class Choice(models.Model):
     anumber = models.IntegerField()
 
     objects = LambdaManager()
-</pre>
+
+```
 
 
-<pre>
 # elsewhere:
 
 from models import Choice
@@ -46,7 +46,9 @@ Choice.objects.where(lambda c: c.votes > c.anumber)
 Choice.objects.where(lambda x: x.votes < x.votes + 1)
 Choice.objects.where(lambda x: x.votes < x.votes + x.votes + 2)
 
-</pre>
+
+
+
 
 TODO: Implement other arithmetic operators: *, -, /
 
